@@ -3,7 +3,7 @@
     <h1>To Do App</h1>
     <div v-if="toDos.length > 0">
       <div v-for="todo in toDos" :key="todo.id">
-        <p>{{ todo.title }}</p>
+        <todos :todos="todo" />
       </div>
     </div>
     <div v-else>
@@ -15,8 +15,8 @@
 <script>
 import todos from '../components/todos.vue'
 export default {
+  components: { todos },
   name: 'HomeView',
-  components:[todos],
   data() {
     return {
       toDos: []
