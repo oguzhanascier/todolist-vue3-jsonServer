@@ -20,4 +20,20 @@ export default {
 
 <style>
 
+.todos{
+    margin: 12px;
+    background: #7432b6;
+    padding: 10px;
+    border-radius: 20px;
+    transition: all .3s ease-in-out;
+    box-shadow: 1mm 1mm 8mm rgba(0, 0, 0, 0.42) inset;
+    
+}
+
+
+.todos:hover{
+    background: #322044;
+}
+
+
 </style>
