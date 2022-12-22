@@ -27,7 +27,13 @@ export default {
             content:this.content,
 
         }
-        console.log(todo);
+        fetch('http://localhost:3000/ToDos',
+        {
+            methods:'POST',
+            header:{'Content-Type':'application/json'},
+            body:JSON.stringify(todo)
+
+        })
     }
  }
 }
