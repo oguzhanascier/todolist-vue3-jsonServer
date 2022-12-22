@@ -1,6 +1,10 @@
 <template>
   <div class="home">
   <h1>To Do App</h1>
+  <div v-for="todo in toDos" :key="todo.id">
+    {{ todo.title }}
+    <p></p>
+  </div>
   </div>
 </template>
 
@@ -8,7 +12,10 @@
 export default {
   name: 'HomeView',
   data(){
+    return{
     toDos :[]
+
+    }
   },
   mounted(){
     fetch('http://localhost:3000/ToDos')
