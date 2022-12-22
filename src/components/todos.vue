@@ -33,7 +33,9 @@ export default {
             this.showDetail=!this.showDetail
         },
         deleteTodo(){
-            console.log('delete');
+            fetch(this.uri, {method:'DELETE'})
+            .then(()=> this.$emit('delete', this.todos))
+            .catch((err) => console.log(err))
         }
     }
 
