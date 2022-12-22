@@ -1,9 +1,9 @@
 <template>
-  <div class="todos">
+  <div class="todos" @click="detail">
     <div class="title">
         <h3>{{todos.title}}</h3>
     </div>
-    <div class="details">
+    <div class="details" v-if="showDetail">
         <p class="content">
             {{ todos.content }}
         </p>
@@ -13,7 +13,18 @@
 
 <script>
 export default {
-    props:['todos']
+    props:['todos'],
+    data(){
+        return{
+          showDetail: false,  
+        }
+    },
+
+    methods:{
+        detail(){
+            this.showDetail=!this.showDetail
+        }
+    }
 
 }
 </script>
@@ -27,6 +38,7 @@ export default {
     border-radius: 20px;
     transition: all .3s ease-in-out;
     box-shadow: 1mm 1mm 8mm rgba(0, 0, 0, 0.42) inset;
+    cursor: pointer;
     
 }
 
