@@ -1,8 +1,13 @@
 <template>
-
+  <navbar></navbar>
   <router-view></router-view>
 </template>
-
+<script>
+import navbar from './components/navbar.vue';
+export default{
+components:{navbar}
+}
+</script>
 <style>
 #app{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
