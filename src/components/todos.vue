@@ -1,11 +1,11 @@
 <template>
-    <div class="todos">
+    <div class="todos" :class="{isDone: todos.done}">
         <div class="title">
             <h3 @click="detail">{{ todos.title }}</h3>
             <section class="icons">
                 <i class="bi bi-pen"></i>
                 <i class="bi bi-trash" @click="deleteTodo"></i>
-                <i class="bi bi-check2-all" @click="done"></i>
+                <i class="bi bi-check2-all tick" @click="done" ></i>
 
             </section>
         </div>
@@ -106,4 +106,15 @@ h3 {
     background: #663399;
 
 }
+
+.isDone{
+    box-shadow: 0mm 0mm 3mm #ffff inset;
+
+
+}
+
+.isDone .tick{
+    color: #b7e60f;
+}
+
 </style>
