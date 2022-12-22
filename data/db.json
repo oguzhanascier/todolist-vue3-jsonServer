@@ -7,15 +7,15 @@
       "done": true
     },
     {
-      "id": 2,
-      "title": "İngilizce Çalış",
-      "content": "20 dakikalık dizinin tamamını inceleyerek izle",
-      "done": false
-    },
-    {
       "id": 3,
       "title": "Alışveriş",
       "content": "170gram tereyağ, 250gram un, 500ml su, 100gram şeker",
+      "done": true
+    },
+    {
+      "id": 58662280,
+      "title": "Uzan",
+      "content": "gidip uzanayım 13 dk ",
       "done": false
     }
   ]

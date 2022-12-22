@@ -23,8 +23,10 @@ nav{
     border-bottom: 1px solid rgba(255, 255, 255, 0.252);
     
 }
-.nav-link{
-    color: white;
+.nav-link {
+    color: white !important;
 }
+
+
 
 </style>
