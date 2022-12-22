@@ -13,8 +13,10 @@
 </template>
 
 <script>
+import todos from '../components/todos.vue'
 export default {
   name: 'HomeView',
+  components:[todos],
   data() {
     return {
       toDos: []
