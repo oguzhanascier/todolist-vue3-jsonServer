@@ -3,7 +3,7 @@
     <h1>To Do App</h1>
     <div v-if="toDos.length > 0">
       <div v-for="todo in toDos" :key="todo.id">
-        <todos :todos="todo" @delete="deleteHandle"/>
+        <todos :todos="todo" @delete="deleteHandle" @done="doneHandle" />
       </div>
     </div>
     <div v-else>
@@ -23,12 +23,18 @@ export default {
 
     }
   },
-  methods:{
-    deleteHandle(id){
-      this.toDos=this.toDos.filter(todo =>{
-        return todo.id!==id
+  methods: {
+    deleteHandle(id) {
+      this.toDos = this.toDos.filter(todo => {
+        return todo.id !== id
       })
-
+    },
+    doneHandle(id){
+      let isDone= this.toDos.find(todos =>{
+        return todos.id==id
+      })
+      isDone.done=!isDone.done
+      
     }
   },
   mounted() {
