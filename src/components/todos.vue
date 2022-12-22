@@ -2,13 +2,14 @@
   <div class="todos" @click="detail">
     <div class="title">
         <h3>{{todos.title}}</h3>
+        <section class="icons">
+            <i class="bi bi-pen"></i>
+            <i class="bi bi-trash"></i>
+            <i class="bi bi-check2-all"></i>
+    
+        </section>
     </div>
-    <section class="icons">
-        <i class="bi bi-pen"></i>
-        <i class="bi bi-trash"></i>
-        <i class="bi bi-check2-all"></i>
-
-    </section>
+  
     <div class="details" v-if="showDetail">
         <p class="content">
             {{ todos.content }}
@@ -45,6 +46,7 @@ export default {
     transition: all .3s ease-in-out;
     box-shadow: 1mm 1mm 8mm rgba(0, 0, 0, 0.42) inset;
     cursor: pointer;
+    padding: 15px 20px 15px 20px;
     
 }
 
@@ -58,6 +60,22 @@ h3{
     font-size: 18px;
     color: rgba(217, 192, 192, 0.592);
 }
+
+.title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bi{
+    margin-left: 10px ;
+
+}
+
+.bi:hover{
+    color: #666;
+}
+
 
 
 </style>
