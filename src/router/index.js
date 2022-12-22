@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Form from '../views/todoAdd.vue'
+import Edit from '../views/todoEdit.vue'
 
 const routes = [
   {
@@ -14,9 +15,10 @@ const routes = [
     component: Form
   },
   {
-    path: '/todo-form/:id',
+    path: '/todo-edit/:id',
     name: 'edit',
-    component: Form
+    component: Edit,
+    props:true
   },
 ]
 
