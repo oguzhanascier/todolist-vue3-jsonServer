@@ -1,10 +1,10 @@
 <template>
-  <div class="todos" @click="detail">
+  <div class="todos">
     <div class="title">
-        <h3>{{todos.title}}</h3>
+        <h3  @click="detail" >{{todos.title}}</h3>
         <section class="icons">
             <i class="bi bi-pen"></i>
-            <i class="bi bi-trash"></i>
+            <i class="bi bi-trash" @click="deleteTodo"></i>
             <i class="bi bi-check2-all"></i>
     
         </section>
@@ -31,6 +31,9 @@ export default {
         detail(){
             this.showDetail=!this.showDetail
         },
+        deleteTodo(){
+            console.log('delete');
+        }
     }
 
 }
@@ -69,13 +72,27 @@ h3{
 
 .bi{
     margin-left: 10px ;
+    font-size: 17px;
 
 }
 
 .bi:hover{
     color: #666;
 }
+.details{
+    position: relative;
+    padding: 20px;
+}
+.details::before{
+    position: absolute;
+    top: 0;
+    left:0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #663399;
 
+}
 
 
 </style>
