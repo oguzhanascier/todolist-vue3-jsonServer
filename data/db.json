@@ -1,0 +1,7 @@
+{
+    "ToDos":[
+       { "id":1, "title":"Kitap Oku", "content":"30 Sayfalık Harry Potter Okuması", "done":false},
+       { "id":2, "title":"İngilizce Çalış", "content":"20 dakikalık dizinin tamamını inceleyerek izle", "done":false},
+       { "id":3, "title":"Alışveriş", "content":"170gram tereyağ, 250gram un, 500ml su, 100gram şeker", "done":false}
+    ]
+}
