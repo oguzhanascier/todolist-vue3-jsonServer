@@ -3,7 +3,7 @@
     <h1>To Do App</h1>
     <div v-if="toDos.length > 0">
       <div v-for="todo in toDos" :key="todo.id">
-        <todos :todos="todo" />
+        <todos :todos="todo" @delete="deleteHandle"/>
       </div>
     </div>
     <div v-else>
@@ -20,6 +20,14 @@ export default {
   data() {
     return {
       toDos: []
+
+    }
+  },
+  methods:{
+    deleteHandle(id){
+      this.toDos=this.toDos.filter(todo =>{
+        return todo.id!==id
+      })
 
     }
   },

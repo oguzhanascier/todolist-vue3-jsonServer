@@ -34,7 +34,7 @@ export default {
         },
         deleteTodo(){
             fetch(this.uri, {method:'DELETE'})
-            .then(()=> this.$emit('delete', this.todos))
+            .then(()=> this.$emit('delete', this.todos.id))
             .catch((err) => console.log(err))
         }
     }
