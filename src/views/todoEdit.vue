@@ -1,6 +1,7 @@
 <template>
 <div>
-    <h2>EDİT</h2>
+    <h2>EDIT</h2>
+    <small>ID: {{id}}</small>
     <form >
         <label>Title</label>
         <input type="text" v-model="title" required>
@@ -16,6 +17,7 @@
 
 <script>
 export default {
+    props:['id'],
     data(){
         return{
             title:'',

@@ -3,7 +3,8 @@
         <div class="title">
             <h3 @click="detail">{{ todos.title }}</h3>
             <section class="icons">
-                <i class="bi bi-pen"></i>
+                <router-link :to="{name:'edit', params:{id:todos.id}}" tag="i" class="bi bi-pen">
+                </router-link>
                 <i class="bi bi-trash" @click="deleteTodo"></i>
                 <i class="bi bi-check2-all tick" @click="done" ></i>
 
@@ -84,6 +85,7 @@ h3 {
 .bi {
     margin-left: 10px;
     font-size: 17px;
+    color: white;
 
 }
 
