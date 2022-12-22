@@ -13,6 +13,11 @@ const routes = [
     name: 'form',
     component: Form
   },
+  {
+    path: '/todo-form/:id',
+    name: 'edit',
+    component: Form
+  },
 ]
 
 const router = createRouter({
