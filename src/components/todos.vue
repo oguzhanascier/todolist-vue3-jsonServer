@@ -23,7 +23,8 @@ export default {
     props:['todos'],
     data(){
         return{
-          showDetail: false,  
+          showDetail: false,
+          uri:'http://localhost:3000/ToDos'
         }
     },
 
