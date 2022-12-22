@@ -24,7 +24,7 @@ export default {
     data(){
         return{
           showDetail: false,
-          uri:'http://localhost:3000/ToDos'+this.todos.id
+          uri:'http://localhost:3000/ToDos/'+this.todos.id
         }
     },
 
