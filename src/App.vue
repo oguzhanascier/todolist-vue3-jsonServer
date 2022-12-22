@@ -4,5 +4,10 @@
 </template>
 
 <style>
+body{
+  background: #663399;
+}
+
+
 
 </style>
