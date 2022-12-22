@@ -21,7 +21,8 @@ export default {
     data(){
         return{
             title:'',
-            content:''
+            content:'',
+            uri:'http://localhost:3000/ToDos'
         }
     },
 
