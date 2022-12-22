@@ -22,17 +22,21 @@ export default {
  methods:{
     todoAdd(){
         let todo= {
-            id:Math.floor(Math.random()*99999999),
-            baslik:this.title,
-            content:this.content,
+             id:Math.floor(Math.random()*99999999),
+            "title":this.title,
+            "content":this.content,
+            "done":false
 
         }
+        console.log(todo);
         fetch('http://localhost:3000/ToDos',
         {
-            methods:'POST',
-            header:{'Content-Type':'application/json'},
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
             body:JSON.stringify(todo)
 
+        }).then(()=>{
+            this.$router.push('/')
         })
     }
  }
@@ -48,6 +52,7 @@ form{
     padding: 20px;
     border-radius: 20px;
     gap: 30px;
+    margin-top: 20px;
 }
 
 label{
