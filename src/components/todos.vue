@@ -3,6 +3,12 @@
     <div class="title">
         <h3>{{todos.title}}</h3>
     </div>
+    <section class="icons">
+        <i class="bi bi-pen"></i>
+        <i class="bi bi-trash"></i>
+        <i class="bi bi-check2-all"></i>
+
+    </section>
     <div class="details" v-if="showDetail">
         <p class="content">
             {{ todos.content }}
