@@ -2,8 +2,8 @@
   "ToDos": [
     {
       "id": 1,
-      "title": "Kitap Oku",
-      "content": "30 Sayfalık Harry Potter Okuması",
+      "title": "Oldu",
+      "content": "Galiba bu sefer",
       "done": true
     },
     {
@@ -16,6 +16,12 @@
       "id": 58662280,
       "title": "Uzan",
       "content": "gidip uzanayım 13 dk ",
+      "done": true
+    },
+    {
+      "id": 98743071,
+      "title": "Düzenlendi",
+      "content": "Edit deneme",
       "done": false
     }
   ]
