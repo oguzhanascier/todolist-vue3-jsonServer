@@ -23,7 +23,7 @@ export default {
     methods:{
         detail(){
             this.showDetail=!this.showDetail
-        }
+        },
     }
 
 }
