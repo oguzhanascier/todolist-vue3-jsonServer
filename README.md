@@ -1,19 +1,3 @@
-# todolist
+# use of vue3 & json server
 
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+It's my first project for Vue 3 and I learned to use 'json-server' here.
