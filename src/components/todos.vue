@@ -36,4 +36,10 @@ export default {
 }
 
 
+h3{
+    font-size: 18px;
+    color: rgba(217, 192, 192, 0.592);
+}
+
+
 </style>
