@@ -12,7 +12,7 @@
   margin: 0 auto;
 }
 body{
-  background: #663399;
+  background: #663399 !important;
 }
 
 
