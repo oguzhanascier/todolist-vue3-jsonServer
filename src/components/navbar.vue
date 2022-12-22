@@ -3,8 +3,8 @@
     <div class="container-fluid">
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-            <router-link to="/" tag="a" class="nav-link">HOME</router-link>
-            <router-link to="/todo-form" tag="a" class="nav-link">NEW TODO</router-link>
+            <router-link :to="{name:'home'}" tag="a" class="nav-link">HOME</router-link>
+            <router-link :to="{name:'form'}" tag="a" class="nav-link">NEW TODO</router-link>
         </div>
       </div>
     </div>
