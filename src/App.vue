@@ -1,21 +1,14 @@
 <template>
   <div>
     <navbar></navbar>
-    <navbar-filter @filterStatus="activeTab = $event" :activeTab="activeTab"></navbar-filter>
     <router-view></router-view>
   </div>
 </template>
 <script>
 import navbar from './components/navbar.vue';
-import navbarFilter from './components/navbarFilter.vue';
 export default {
-  components: { navbar, navbarFilter },
-  data() {
-    return {
+  components: { navbar },
 
-      activeTab:'all'
-    }
-  }
 }
 </script>
 <style>
