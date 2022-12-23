@@ -1,8 +1,10 @@
 <template>
   <div class="home">
     <h1>To Do App</h1>
+    <navbar-filter @filterStatus="activeTab = $event" :activeTab="activeTab"></navbar-filter>
+
     <div v-if="toDos.length > 0">
-      <div v-for="todo in toDos" :key="todo.id">
+      <div v-for="todo in filtered" :key="todo.id">
         <todos :todos="todo" @delete="deleteHandle" @done="doneHandle" />
       </div>
     </div>
@@ -14,12 +16,15 @@
 
 <script>
 import todos from '../components/todos.vue'
+import navbarFilter from '@/components/navbarFilter.vue'
 export default {
-  components: { todos },
+  components: { todos, navbarFilter },
   name: 'HomeView',
   data() {
     return {
-      toDos: []
+      toDos: [],
+      activeTab: 'all'
+
 
     }
   },
@@ -29,12 +34,12 @@ export default {
         return todo.id !== id
       })
     },
-    doneHandle(id){
-      let isDone= this.toDos.find(todos =>{
-        return todos.id==id
+    doneHandle(id) {
+      let isDone = this.toDos.find(todos => {
+        return todos.id == id
       })
-      isDone.done=!isDone.done
-      
+      isDone.done = !isDone.done
+
     }
   },
   mounted() {
@@ -42,6 +47,21 @@ export default {
       .then((res) => res.json()).then((data) => this.toDos = data)
       .catch((err) => console.log(err))
 
+  },
+  computed: {
+    filtered() {
+      if (this.activeTab === 'done') {
+        return this.toDos.filter(todo => todo.done)
+      }
+
+      if (this.activeTab === 'will') {
+        return this.toDos.filter(todo => !todo.done)
+      }
+
+      return this.toDos
+    }
+
   }
+
 }
 </script>
