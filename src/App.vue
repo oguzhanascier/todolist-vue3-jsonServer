@@ -1,7 +1,7 @@
 <template>
   <div>
     <navbar></navbar>
-    <navbar-filter @filterStatus="activeTab = $event"></navbar-filter>
+    <navbar-filter @filterStatus="activeTab = $event" :aciveTab="activeTab"></navbar-filter>
     <router-view></router-view>
   </div>
 </template>
@@ -13,6 +13,7 @@ export default {
   data() {
     return {
 
+      activeTab:'all'
     }
   }
 }
