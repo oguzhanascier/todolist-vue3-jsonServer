@@ -1,8 +1,8 @@
 <template>
     <nav class="filter-nav">
-        <button @click="filterUpd('all')">All</button>
-        <button @click="filterUpd('will')">Will Do It</button>
-        <button @click="filterUpd('done')">Done</button>
+        <button @click="filterUpd('all')" :class="{active:activeStatus==='all'}">All</button>
+        <button @click="filterUpd('will')" :class="{active:activeStatus==='will'}">Will Do It</button>
+        <button @click="filterUpd('done')" :class="{active:activeStatus==='done'}">Done</button>
 
     </nav>
 
