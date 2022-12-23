@@ -10,6 +10,7 @@
 
 <script>
 export default {
+    props:['activeTav'],
     methods: {
         filterUpd(status) {
             this.$emit('filterStatus', status)
@@ -27,4 +28,7 @@ button{
     margin: 5px;
 }
 
+.filter-nav button.active{
+    border-bottom: 1px solid white;
+}
 </style>
