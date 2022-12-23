@@ -1,8 +1,8 @@
 <template>
     <nav class="filter-nav">
-        <button>All</button>
-        <button>Will Do It</button>
-        <button>Done</button>
+        <button @click="filterUpd('all')">All</button>
+        <button @click="filterUpd('will')">Will Do It</button>
+        <button @click="filterUpd('done')">Done</button>
 
     </nav>
 
@@ -10,10 +10,21 @@
 
 <script>
 export default {
+    methods: {
+        filterUpd(status) {
+            this.$emit('filterStatus', status)
+
+        }
+    }
 
 }
 </script>
 
-<style>
+<style scoped>
+
+button{
+    border: 1px solid white;
+    margin: 5px;
+}
 
 </style>
